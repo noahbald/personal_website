@@ -1,0 +1,222 @@
+/* Global */
+html {
+    background-color: #ecf0f1;
+}
+body {
+    margin: 0px;
+    color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+}
+header, footer, section {
+    display: inline-block;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+
+/* Header */
+header {
+    margin-top: 15vw;
+    height: calc(100vh - 15vw);
+}
+header h1 {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+header img {
+    display: inline-block;
+    border-radius: 100%;
+    height: 10vw;
+}
+header figure {
+    display: flex;
+    width: 100%;
+    float: left;
+}
+header figcaption {
+    display: flex;
+    align-items: center;
+    height: 10vw;
+    margin-left: 2.08rem;
+}
+
+/* Section */
+
+/* Footer */
+footer sub {
+    display: flex;
+    color: rgba(0, 0, 0, 0.3);
+    margin: 1rem auto 1rem auto;
+    text-transform: none;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Text */
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    font-weight: 500;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+h4 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+}
+sub {
+    display: inline-block;
+    padding-bottom: 0.33rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #899db2;
+}
+
+/* Links */
+a {
+    color: rgb(231, 76, 60);
+    text-decoration: none;
+    transition: 0.2s;
+}
+a:hover {
+    color: rgb(41, 128, 185);
+}
+a:visited {
+    color: rgb(52, 152, 219);
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 1rem 0 1rem;
+    width: 10vw;
+}
+nav p {
+    display: inline;
+}
+
+/* Cols */
+.col {
+    display: block;
+    margin: 0;
+    width: 49%;
+}
+.col.left img, .col.right img {
+    width: 100%;
+}
+
+/* Figure */
+figure {
+    margin: 0;
+}
+
+.clickbox {
+    margin-bottom: 1.5vw;
+    pointer-events: none;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 0.2s
+}
+.clickbox figcaption {
+    display: flex;
+    border-top: none;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+}
+.clickbox img {
+    vertical-align: middle;
+    filter: grayscale(10%) brightness(75%);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 0.2s;
+}
+a:hover .clickbox img {
+    filter: grayscale(0%) brightness(100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+a:hover .clickbox {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Forms */
+.tab {
+    width: calc(70vw - 1.6em);
+    color: rgb(231, 76, 60);
+    margin-bottom: 0;
+    padding: 0;
+    padding: 0.4rem 0.8em 0.3rem 0.8em;
+    background-color: rgba(44, 62, 80, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 0.2s;
+}
+.tab:hover {
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 0.4rem;
+    background-color: rgba(44, 62, 80, 1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.tab:hover li {
+    color: rgb(255, 255, 255);
+}
+.tab ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    margin: 0 0 0.3rem 0.1rem;
+}
+.tab li {
+    display: inline;
+    color: rgb(53, 75, 96);
+    transition: 0.2s;
+}
+
+/* Whitespace */
+.block {
+    height: 5vw;
+}
+.block.double {
+    height: 10vw;
+}
+.block.triple {
+    height: 15vw;
+}
+
+/* IDs */
+#resume ul {
+    margin-top: 0;
+}
+
+/* Other */
+.left {
+    float: left;
+}
+.right {
+    float: right; 
+}
+.line {
+    margin: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
