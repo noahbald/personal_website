@@ -116,36 +116,38 @@ nav p {
 
 /* Cols */
 .col {
-    display: block;
+    display: inline-block;
     margin: 0;
     width: 49%;
 }
-.col.left img, .col.right img {
+.col img {
     width: 100%;
 }
 
 /* Figure */
 figure {
     margin: 0;
-}
-
-.clickbox {
     margin-bottom: 1.5vw;
-    pointer-events: none;
     outline: 1px solid rgba(0, 0, 0, 0.1);
     font-weight: bold;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    transition: 0.2s
 }
-.clickbox figcaption {
+figcaption {
     display: flex;
     border-top: none;
     justify-content: center;
     align-items: center;
-    height: 5vw;
+    height: 5vw;    
+}
+figure img {
+    vertical-align: middle;
+}
+
+.clickbox {
+    pointer-events: none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 0.2s
 }
 .clickbox img {
-    vertical-align: middle;
     filter: grayscale(10%) brightness(75%);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     transition: 0.2s;
@@ -200,6 +202,7 @@ a:hover .clickbox {
     height: 10vw;
 }
 .block.triple {
+    display: inline-block;
     height: 15vw;
 }
 
@@ -219,4 +222,19 @@ a:hover .clickbox {
     margin: auto;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
