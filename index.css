@@ -181,8 +181,12 @@ a:hover .clickbox {
 }
 .tab li {
     display: inline;
+    width: calc(100%/3);
     color: rgb(53, 75, 96);
     transition: 0.2s;
+}
+.tab .right {
+    text-align: right;
 }
 
 .button, .tab {
@@ -229,6 +233,11 @@ a:hover .clickbox {
 
 /* Other */
 .left {
+    text-align: left;
+    float: left;
+}
+.middle {
+    text-align: left;
     float: left;
 }
 .right {
