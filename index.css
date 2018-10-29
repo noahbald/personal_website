@@ -109,6 +109,9 @@ a:hover {
 a:visited {
     color: rgb(52, 152, 219);
 }
+a:visited:hover {
+    color: rgb(41, 128, 185);
+}
 
 nav ul {
     list-style: none;
@@ -149,6 +152,7 @@ figcaption {
 }
 figure img {
     vertical-align: middle;
+    max-width: 100%;
 }
 
 .clickbox {
@@ -171,6 +175,13 @@ a:hover .clickbox {
 
 /* Forms */
 .tab:hover li {
+    color: rgb(255, 255, 255);
+}
+a:visited .tab {
+    color: rgb(52, 152, 219);
+    transition: 0.2s;
+}
+a:visited:hover .tab {
     color: rgb(255, 255, 255);
 }
 .tab ul {
