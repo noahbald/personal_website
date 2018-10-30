@@ -145,10 +145,10 @@ figure {
 }
 figcaption {
     display: flex;
+    padding: 1rem 0 1rem 0;
     border-top: none;
     justify-content: center;
-    align-items: center;
-    height: 5vw;    
+    align-items: center; 
 }
 figure img {
     vertical-align: middle;
@@ -272,5 +272,50 @@ a:visited:hover .tab {
     }
     100% {
         opacity: 1;
+    }
+}
+
+/* Media Queries */
+
+/* Mobile devices */
+@media only screen and (orientation : portrait) {
+    html {
+        font-size: 125%;
+    }
+    p, sub {
+        font-size: 1.5rem;
+    }
+    .desktop-only, .tab ul {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+    .mobile-fw {
+        width: 100%;
+    }
+    .mobile-only {
+        visibility: visible;
+    }
+    header {
+        height: auto;
+    }
+    header img {
+        height: 15vw;
+    }
+    .tab {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+/* Desktop devices */
+@media only screen and (orientation : landscape) {
+    .desktop-only {
+        visibility: visible;
+    }
+    .mobile-only {
+        visibility: hidden;
     }
 }
