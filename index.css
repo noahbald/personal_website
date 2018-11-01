@@ -39,7 +39,7 @@ header figure {
 header figcaption {
     display: flex;
     align-items: center;
-    height: 10vw;
+    height: calc(10vw - 2rem);
     margin-left: 2.08rem;
 }
 
