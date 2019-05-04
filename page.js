@@ -7,7 +7,7 @@ function main()
     if (params.has("id"))
     {
         var id = params.get("id");
-        var json = $.getJSON("file:///D:/Projects/personal_website/page_id/" + id + "/page.json", function(obj){loadContents(obj);})
+        var json = $.getJSON("https://www.noahwbaldwin.me/page_id/" + id + "/page.json", function(obj){loadContents(obj);})
         //$("#page").load("https://noahwbaldwin.me/page_id/" + id + "/page.json", alert("hi"))
         //iframe.src = 'https://noahwbaldwin.me/page_id/' + id + '/page.json';
         //iframe.src = "file:///D:/Projects/personal_website/page_id/" + id + "/page.json";
