@@ -7,16 +7,14 @@ function main()
     if (params.has("id"))
     {
         var id = params.get("id");
-        var json = $.getJSON("https://www.noahwbaldwin.me/page_id/" + id + "/page.json", function(obj){loadContents(obj);}).fail(function(){window.location.replace("404")})
-        //$("#page").load("https://noahwbaldwin.me/page_id/" + id + "/page.json", alert("hi"))
-        //iframe.src = 'https://noahwbaldwin.me/page_id/' + id + '/page.json';
-        //iframe.src = "file:///D:/Projects/personal_website/page_id/" + id + "/page.json";
+        var json = $.getJSON("https://www.noahwbaldwin.me/page_id/" + id + "/page.json", function(obj){loadContents(obj, id);}).fail(function(){
+            var json = $.getJSON("https://www.noahwbaldwin.me/page_id/404/page.json", function(obj){loadContents(obj, "404");});
+        });
     }
 }
 
-function loadContents(obj)
+function loadContents(obj, id)
 {
-    var id = (new URL(document.location)).searchParams.get("id");
     var gallery = document.getElementById("gallery");
     var header = document.getElementsByTagName("header")[0];
     var article = document.getElementById("article");
@@ -31,8 +29,8 @@ function loadContents(obj)
     for (i in obj.article)
     {
         article.innerHTML += '<p>' + obj.article[i] + '</p>';
+        article.innerHTML += '<div class="block"></div>';
     }
-    article.innerHTML += '<div class="block"></div>';
 
     document.title = 'Noah Baldwin | ' + obj.header.title;
 
