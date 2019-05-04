@@ -16,7 +16,7 @@ function main()
 
 function loadContents(obj)
 {
-    var id = params.get("id");
+    var id = (new URL(document.location)).searchParams.get("id");
     var gallery = document.getElementById("gallery");
     var header = document.getElementsByTagName("header")[0];
     var article = document.getElementById("article");
