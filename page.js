@@ -29,6 +29,9 @@ function loadContents(obj, id)
     for (i in obj.article)
     {
         article.innerHTML += '<p>' + obj.article[i] + '</p>';
+    }
+    if (obj.article.length > 0)
+    {
         article.innerHTML += '<div class="block"></div>';
     }
 
