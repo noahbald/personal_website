@@ -16,6 +16,24 @@ function main()
 
 function loadContents(obj)
 {
-    var content = $("#page_src").contents().find('body').html;
-    console.log("hi");
+    var gallery = document.getElementById("gallery");
+    var header = document.getElementsByTagName("header")[0];
+    var article = document.getElementById("article");
+
+    header.innerHTML = '<h1>' + obj.header.title + ' | <a>' + obj.header.category + '</a></h1><div class="block double"></div><h2>' + obj.header.description + '</h2><div class="block"><br/></div>';
+
+    for (i in obj.gallery)
+    {
+        gallery.innerHTML += '<figure><img src="' + obj.gallery[i].img_src + '"/><figcaption><p>' + obj.gallery[i].caption + '</p></figcaption></figure>';
+    }
+
+    for (i in obj.article)
+    {
+        article.innerHTML += '<p>' + obj.article[i] + '</p>';
+    }
+    article.innerHTML += '<div class="block"></div>';
+
+    document.title = 'Noah Baldwin | ' + obj.header.title;
+
+    console.log("page loaded successfully");
 }
