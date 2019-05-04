@@ -25,7 +25,7 @@ function loadContents(obj)
 
     for (i in obj.gallery)
     {
-        gallery.innerHTML += '<figure><img src="pageid/' + id + '/' + obj.gallery[i].img_src + '"/><figcaption><p>' + obj.gallery[i].caption + '</p></figcaption></figure>';
+        gallery.innerHTML += '<figure><img src="/pageid/' + id + '/' + obj.gallery[i].img_src + '"/><figcaption><p>' + obj.gallery[i].caption + '</p></figcaption></figure>';
     }
 
     for (i in obj.article)
