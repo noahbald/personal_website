@@ -16,6 +16,7 @@ function main()
 
 function loadContents(obj)
 {
+    var id = params.get("id");
     var gallery = document.getElementById("gallery");
     var header = document.getElementsByTagName("header")[0];
     var article = document.getElementById("article");
@@ -24,7 +25,7 @@ function loadContents(obj)
 
     for (i in obj.gallery)
     {
-        gallery.innerHTML += '<figure><img src="' + obj.gallery[i].img_src + '"/><figcaption><p>' + obj.gallery[i].caption + '</p></figcaption></figure>';
+        gallery.innerHTML += '<figure><img src="pageid/' + id + '/' + obj.gallery[i].img_src + '"/><figcaption><p>' + obj.gallery[i].caption + '</p></figcaption></figure>';
     }
 
     for (i in obj.article)
