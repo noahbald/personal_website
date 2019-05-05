@@ -7,7 +7,7 @@
     },
     "gallery": [
         {
-            "img_src":"site_thumb.png",
+            "img_src":"site-thumb.png",
             "caption": "A snippet of the main page in early development"
         }
     ],
