@@ -45,11 +45,11 @@ header figcaption {
 /* Section */
 
 /* Article */
-#artical {
+#artical, #article {
     margin: 0 25% 0 25%;
     width: 50%;
 }
-#artical p {
+#artical p, #article p {
     padding-top: 0.6rem;
 }
 
