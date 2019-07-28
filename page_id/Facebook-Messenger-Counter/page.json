@@ -8,7 +8,7 @@
     "gallery": [
         {
             "img_src":"main_page.png",
-            "caption": "A snippet of the main page in early development"
+            "caption": "A section of the app allowing users to compare messages sent between different people"
         }
     ],
     "article": [
