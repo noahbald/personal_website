@@ -7,9 +7,11 @@ function main()
     if (params.has("id"))
     {
         var id = params.get("id");
-        var json = $.getJSON("https://www.noahwbaldwin.me/page_id/" + id + "/page.json", function(obj){loadContents(obj, id);}).fail(function(){
-            var json = $.getJSON("https://www.noahwbaldwin.me/page_id/404/page.json", function(obj){loadContents(obj, "404");});
+        var json = $.getJSON("page_id/" + id + "/page.json", function(obj){loadContents(obj, id);}).fail(function(){
+            var json = $.getJSON("page_id/404/page.json", function(obj){loadContents(obj, "404");});
         });
+    } else {
+        var json = $.getJSON("page_id/404/page.json", function(obj){loadContents(obj, "404");});
     }
 }
 
